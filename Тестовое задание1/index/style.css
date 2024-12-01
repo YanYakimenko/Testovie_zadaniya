@@ -1,0 +1,881 @@
+body {
+	margin: 0;
+	font-family: "FuturaFuturisC-Bold";
+	line-height: 1.6;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.3);
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 2rem;
+}
+
+/* Логотип */
+.navbar .logo {
+	margin-right: 10%;
+	text-shadow: 1px 1px #333;
+}
+
+.navbar .logo h1 {
+	margin: 0;
+	font-size: 1.5rem;
+	color: white;
+	font-weight: bold;
+}
+
+/* Список навигации */
+.navbar ul {
+	list-style: none;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	gap: 4rem;
+	flex-direction: row;
+}
+
+.navbar ul li a {
+	text-decoration: none;
+	color: white;
+	font-weight: 600;
+	font-size: 1rem;
+	text-shadow: 1px 1px#333;
+}
+
+.navbar ul li a:hover {
+	color: #007BFF;
+}
+
+.phone {
+	font-size: 1rem;
+	font-weight: bold;
+	color: white;
+	margin-left: 1rem;
+	display: flex;
+	align-items: center;
+	text-shadow: 1px 1px#333;
+}
+
+/* Кнопка-гамбургер */
+.hamburger {
+	display: none;
+	font-size: 2rem;
+	cursor: pointer;
+	position: fixed;
+	top: 0.5rem;
+	right: 1rem;
+	z-index: 1100;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		height: auto;
+		padding: 1rem;
+
+	}
+
+	.navbar ul li a {
+		font-size: 1rem;
+	}
+
+	.hamburger {
+		display: block;
+	}
+
+	.navbar ul {
+		flex-direction: column;
+		align-items: center;
+		display: none;
+		width: 100%;
+	}
+
+	.navbar.active ul {
+		display: flex;
+	}
+
+	.navbar.active ul li a {
+		color: #333;
+		text-shadow: none;
+	}
+
+	.navbar.active {
+		background: rgba(255, 255, 255, 0.9);
+		height: 100vh;
+		overflow-y: auto;
+	}
+
+	.navbar .logo {
+		margin-right: 0;
+		margin-bottom: 1rem;
+	}
+
+	.navbar .logo h1 {
+		color: #333;
+	}
+
+
+
+	.phone {
+		display: none;
+		text-align: center;
+		margin: 1rem 0;
+	}
+
+	.navbar.active .phone {
+		display: block;
+		text-shadow: none;
+		color: #333;
+	}
+}
+
+/* 1secction */
+/* Основной стиль для секции */
+.section1 {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+
+}
+
+
+/* Наложение фона */
+.overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.bg-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	z-index: 1;
+}
+
+.bg-vector {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	z-index: 2;
+}
+
+/* Контент секции */
+.section1-content {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 2rem;
+	max-width: 1200px;
+
+}
+
+.section1-text {
+	max-width: 70%;
+	margin-bottom: 1rem;
+}
+
+.section1-text h2 {
+	font-size: 3rem;
+	margin: 0;
+	color: white;
+}
+
+.translucent-block {
+	background-color: rgba(0, 0, 0, 0.11);
+	color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 400px;
+}
+
+.translucent-block p {
+	margin: 0;
+	font-size: 1.2rem;
+}
+
+.checkmark {
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.checkmark::after {
+	content: "";
+	display: block;
+	width: 10px;
+	height: 5px;
+	border-left: 3px solid white;
+	border-bottom: 3px solid white;
+	transform: rotate(-45deg);
+	position: relative;
+	top: 3px;
+	left: 4px;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+/* Форма обратной связи */
+.callback-form {
+	background: white;
+	color: #333;
+	padding: 0;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	max-width: 380px;
+
+}
+
+.callback-head {
+	background: #639;
+	color: white;
+	padding: 1rem;
+	text-align: center;
+	border-radius: 10px 10px 0 0;
+	font-size: 1.25rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+/* Поля ввода */
+.callback-form input {
+	display: block;
+	width: 100%;
+	padding: 0.8rem;
+	margin-bottom: 1rem;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+/* Кнопка отправки */
+.callback-form button {
+	display: block;
+	width: 100%;
+	padding: 0.8rem;
+	border: none;
+	border-radius: 5px;
+	background: #FFA500;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.callback-form button:hover {
+	background: #4c7a99;
+}
+
+
+@media (max-width: 768px) {
+	.section1-content {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+	}
+
+	.section1-text {
+		max-width: 100%;
+		margin-top: 3rem;
+	}
+
+	.callback-form {
+		width: 90%;
+		margin-top: 1.5rem;
+	}
+
+	.section1-text h2 {
+		font-size: 2.5rem;
+	}
+
+	.section1-text p {
+		font-size: 1rem;
+	}
+
+	.callback-form h3 {
+		font-size: 1.3rem;
+	}
+}
+
+
+/* Основной стиль для секции */
+.card-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem 1rem;
+	background-color: white;
+}
+
+.text-container {
+	text-align: center;
+	margin-bottom: 2rem;
+	max-width: 800px;
+}
+
+.text-container h1 {
+	font-size: 2.5rem;
+	color: #333;
+	margin-bottom: 1rem;
+}
+
+.text-container h4 {
+	font-size: 1.2rem;
+	line-height: 1.5;
+}
+
+/* Контейнер карточек */
+.cards-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.5rem;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+/* Карточки */
+.card {
+	background: white;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	padding: 1rem;
+	text-align: center;
+	font-size: 1rem;
+	color: #333;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: auto;
+}
+
+.card img {
+	width: 100%;
+	height: auto;
+	max-width: 150px;
+	border-radius: 10px;
+	margin-bottom: 1rem;
+}
+
+.card p {
+	margin: 0;
+	font-size: 1rem;
+	color: #666;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+	.cards-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.card img {
+		max-width: 120px;
+	}
+}
+
+@media (max-width: 480px) {
+	.cards-container {
+		grid-template-columns: 1fr;
+	}
+}
+
+
+
+
+/* Карусель */
+.brand-carousel {
+	position: relative;
+	padding: 2rem;
+	z-index: 10;
+}
+
+.overlay2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.brand-carousel .bg-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.bg-vector2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+	z-index: 1;
+}
+
+/* Стили для карусели */
+.carousel {
+	position: relative;
+	overflow: hidden;
+	max-width: 100%;
+}
+
+.carousel-container {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+	min-width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.image-block {
+	background-color: white;
+	padding: 1rem;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	max-width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel-item img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 100%;
+}
+
+/* Кнопки управления */
+.carousel-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	font-size: 2rem;
+	padding: 15px;
+	cursor: pointer;
+	z-index: 10;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.prev {
+	left: 10px;
+}
+
+.next {
+	right: 10px;
+}
+
+
+.brand-carousel h3 {
+	text-align: center;
+	color: white;
+	font-size: 2rem;
+	margin-top: 1rem;
+}
+
+.brand-carousel h5 {
+	text-align: center;
+	color: white;
+	font-size: 1rem;
+	margin-top: 1rem;
+}
+
+
+/* Стили для секции с фоновым изображением */
+.work-section {
+	position: relative;
+	padding: 3rem 2rem;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.overlay3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.work-section .bg-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+/* Контейнер для текста */
+.text-container {
+	z-index: 2;
+}
+
+.card-text {
+	margin-bottom: 3rem;
+}
+
+.card-text h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 1rem;
+}
+
+.card-text h4 {
+	font-size: 1.2rem;
+	color: #666;
+	line-height: 1.5;
+	margin: 0 auto;
+	max-width: 700px;
+}
+
+/*пазлы */
+.puzzle-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 0;
+	margin-top: 0;
+	position: relative;
+}
+
+.puzzle-piece {
+	width: 100%;
+	max-width: 450px;
+	height: auto;
+	position: relative;
+	z-index: 1;
+}
+
+.puzzle-container img:nth-child(3),
+.puzzle-container img:nth-child(4) {
+	width: 95%;
+}
+
+/* Коррекция наложения пазлов */
+.puzzle-container img:nth-child(1),
+.puzzle-container img:nth-child(6) {
+	margin-right: -10px;
+}
+
+.puzzle-container img:nth-child(2),
+.puzzle-container img:nth-child(5) {
+	margin-left: -10px;
+}
+
+.puzzle-container img:nth-child(3) {
+	margin-left: -10px;
+}
+
+.puzzle-container img:nth-child(4) {
+	margin-left: -10px;
+}
+
+.puzzle-container img:nth-child(5) {
+	margin-left: -35px;
+}
+
+.puzzle-container img:nth-child(6) {
+	margin-left: -35px;
+}
+
+/* Коррекция для вертикальных рядов */
+.puzzle-container img:nth-child(1),
+.puzzle-container img:nth-child(2),
+.puzzle-container img:nth-child(3),
+.puzzle-container img:nth-child(4),
+.puzzle-container img:nth-child(5),
+.puzzle-container img:nth-child(6) {
+	margin-top: 0px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+	.work-section {
+		padding: 2rem 1rem;
+		min-height: auto;
+
+	}
+
+	.puzzle-container {
+		grid-template-columns: 1fr;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.puzzle-piece {
+		margin: 5px;
+	}
+
+	.puzzle-container img:nth-child(1),
+	.puzzle-container img:nth-child(2),
+	.puzzle-container img:nth-child(3),
+	.puzzle-container img:nth-child(4),
+	.puzzle-container img:nth-child(5),
+	.puzzle-container img:nth-child(6) {
+		margin-top: 20px;
+	}
+}
+
+.button-container {
+	margin-top: 2rem;
+}
+
+.cta-button {
+	background-color: #FFA500;
+	color: white;
+	border: none;
+	padding: 0.8rem 2rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	text-transform: uppercase;
+}
+
+.cta-button:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:active {
+	transform: scale(0.95);
+}
+
+.accordion-section {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.accordion-section .accordion-container {
+	position: relative;
+	z-index: 3;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	width: 80%;
+	max-width: 800px;
+	;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.accordion-section .accordion-item {
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	overflow: hidden;
+	margin-bottom: 15px;
+	background: #f4f4f9;
+}
+
+.accordion-section .accordion-btn {
+	width: 100%;
+	text-align: left;
+	background: white;
+	color: black;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 15px 20px;
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: background-color 0.3s ease;
+}
+
+.accordion-section .accordion-btn:hover {
+	background: #93a4f7;
+}
+
+.accordion-section .accordion-btn:after {
+	content: '⯈';
+	font-size: 16px;
+	transition: transform 0.3s ease;
+}
+
+.accordion-section .accordion-item.active .accordion-btn:after {
+	transform: rotate(90deg);
+}
+
+.accordion-section .accordion-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.3s ease, padding 0.3s ease;
+	padding: 0 20px;
+	background-color: #fff;
+	color: #333;
+}
+
+.accordion-section .accordion-item.active .accordion-content {
+	max-height: 200px;
+	padding: 15px 20px;
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+	border-top: 1px solid #ddd;
+}
+
+.footer_navbar {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #333;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 2rem;
+	text-align: center;
+}
+
+
+.footer_navbar .logo h1 {
+	margin: 0;
+	padding: 2rem;
+	font-size: 1.5rem;
+	color: white;
+	font-weight: bold;
+}
+
+.footer_navbar ul {
+	list-style: none;
+	display: flex;
+	gap: 2rem;
+	padding: 0;
+	margin: 0;
+}
+
+.footer_navbar ul li a {
+	text-decoration: none;
+	color: white;
+	font-weight: 600;
+	font-size: 1rem;
+}
+
+.footer_navbar ul li a:hover {
+	color: #007BFF;
+}
+
+.footer_navbar .phone {
+	font-size: 1rem;
+	font-weight: bold;
+	color: white;
+	text-shadow: 1px 1px #333;
+	margin-left: 2rem;
+}
+
+/* Кнопка "ОСТАВИТЬ ЗАЯВКУ" */
+.apply-button {
+	background-color: #969AF7;
+	color: white;
+	border: none;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: 10px 20px;
+	cursor: pointer;
+	margin-left: 2rem;
+	border-radius: 5px;
+}
+
+.apply-button:hover {
+	background-color: #7a86d1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+	.footer_navbar {
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 1rem;
+	}
+
+	.footer_navbar .logo {
+		margin-bottom: 1rem;
+	}
+
+	.footer_navbar ul {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+
+	.apply-button {
+		margin-left: 0;
+		margin-top: 1rem;
+	}
+
+	.apply-button {
+		width: 100%;
+		max-width: 300px;
+	}
+
+}

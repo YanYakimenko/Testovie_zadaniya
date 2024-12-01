@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Тестовое Задание Якименко</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://db.onlinewebfonts.com/c/307be71c63b229cfecb2152bcb3ba771?family=FuturaFuturisC-Bold"
+		rel="stylesheet">
+</head>
+
+<body>
+	<header class="navbar">
+		<div class="logo">
+			<a href="#">
+				<h1>SIMTEX</h1>
+			</a>
+		</div>
+		<nav>
+			<ul id="navbar-links">
+				<li><a href="#">Каталог</a></li>
+				<li><a href="#">Производители</a></li>
+				<li><a href="#">Для кого мы работаем</a></li>
+				<li><a href="#">Сертификаты</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Контакты</a></li>
+				<div class="phone">+7 (812) 313-58-45</div>
+			</ul>
+		</nav>
+		<div class="hamburger" id="hamburger-menu">
+			&#9776;
+		</div>
+	</header>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const hamburger = document.getElementById('hamburger-menu');
+			const navbar = document.querySelector('.navbar');
+			hamburger.addEventListener('click', function () {
+				navbar.classList.toggle('active');
+			});
+		});
+	</script>
+	<!-- 1 секция -->
+	<section class="section1">
+		<div class="overlay">
+			<img src="/img/BGimg.png" alt="" class="bg-image">
+			<img src="/img/BGVector.png" alt="" class="bg-vector">
+		</div>
+		<div class="section1-content">
+			<div class="section1-text">
+				<h2>ОПТОВЫЕ ПОСТАВКИ</h2>
+				<h2 style="color: cornflowerblue;">электронных компонентов</h2>
+				<h2>ДЕНЬ В ДЕНЬ</h2>
+				<P style="color: cornflowerblue;">Комплексные поставки электронных компонентов и оборудования. Подберем
+					аналоги популярных брендов из
+					Европы в условиях санкций.</P>
+				<div class="translucent-block">
+					<p><span class="checkmark"></span> Отсрочка платежей для постоянных клиентов</p>
+					<p><span class="checkmark"></span> Бесплатная доставка по Москве и СПБ в течение 2х часов</p>
+					<p><span class="checkmark"></span> Квалифицированный персональный менеджер</p>
+				</div>
+			</div>
+			<div class="callback-form">
+				<div class="callback-head">
+					<h3>Закажите обратный звонок</h3>
+				</div>
+				<form action="https://api.web3forms.com/submit" method="POST">
+					<input type="hidden" name="access_key" value="432b7c38-9de0-4bc7-8917-d3efdcfa24dc">
+					<label for="name">Ваше имя*</label>
+					<input type="text" id="name" name="name" placeholder="Петров Петр" required>
+					<label for="phone">Ваш номер*</label>
+					<input type="tel" id="phone" name="phone" placeholder="Введите номер телефона" required>
+					<button type="submit">ЗАКАЗАТЬ ЗВОНОК</button>
+				</form>
+				<script>
+					document.addEventListener('DOMContentLoaded', function () {
+						var phoneInput = document.getElementById('phone');
+						var im = new Inputmask("+7 (999) 999-99-99");
+						im.mask(phoneInput);
+					});
+				</script>
+			</div>
+		</div>
+	</section>
+	<!-- 2 секция -->
+	<section class="card-section">
+		<div class="text-container">
+			<div class="CardText1">
+				<h1>Почему с нами выгодно</h1>
+			</div>
+			<div class="CardText2">
+				<h4>С 1996 года мы занимаемся оптовыми поставками электронных компонентов от ведущих производителей из
+					Европы и Азии для Российских потребителей.</h4>
+			</div>
+		</div>
+		<div class="cards-container">
+			<div class="card">
+				<img src="/img/card1.png" alt="Card Image 1">
+				<p>
+				<h3>Качественная продукция</h3>
+				</p>
+				<p>
+					Все наши товары сертифицированы и имеют сопроводительную документацию.
+				</p>
+			</div>
+			<div class="card">
+				<img src="/img/card2.png" alt="Card Image 2">
+				<h3>Индивидуальный подход</h3>
+				<P>Возможность изготовления компонентов специально для вас на заводах-изготовителя.</P>
+			</div>
+			<div class="card">
+				<img src="/img/card3.png" alt="Card Image 3">
+				<h3>Бесплатная доставка</h3>
+				<p>При наличии товара на складе и заказе от 10 000 рублей, доставим бесплатно по Москве и СПБ в течение
+					2х часов.</p>
+			</div>
+			<div class="card">
+				<img src="/img/card4.png" alt="Card Image 4">
+				<h3>Подбираем аналоги</h3>
+				<p>Поможем подобрать аналоги популярных европейских брендов в условиях санкций.</p>
+			</div>
+			<div class="card">
+				<img src="/img/card5.png" alt="Card Image 5">
+				<h3>Резервный запас компонентов</h3>
+				<p>Хранение товара на наших складах для постоянных клиентов.</p>
+			</div>
+			<div class="card">
+				<img src="/img/card6.png" alt="Card Image 6">
+				<h3>Гибкая система оплаты</h3>
+				<p>Отсрочка платежей для постоянных клиентов.</p>
+			</div>
+		</div>
+	</section>
+	<!--Секция 3 Карусель-->
+	<section class="brand-carousel">
+		<div class="overlay2">
+			<img src="/img/BGimg3.png" alt="" class="bg-image">
+			<img src="/img/BGVector2.png" alt="" class="bg-vector2">
+		</div>
+		<h3>Наши Производители</h3>
+		<div class="carousel">
+			<div class="carousel-container">
+				<div class="carousel-item">
+					<div class="image-block">
+						<img src="/img/brand1.png" alt="Brand 1">
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="image-block">
+						<img src="/img/brand2.png" alt="Brand 2">
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="image-block">
+						<img src="/img/brand3.png" alt="Brand 3">
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="image-block">
+						<img src="/img/brand4.png" alt="Brand 4">
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="image-block">
+						<img src="/img/brand5.png" alt="Brand 5">
+					</div>
+				</div>
+			</div>
+			<!-- Кнопки управления -->
+			<button class="carousel-btn prev" id="prev-btn">&#10094;</button>
+			<button class="carousel-btn next" id="next-btn">&#10095;</button>
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const carouselContainer = document.querySelector('.carousel-container');
+				const prevBtn = document.getElementById('prev-btn');
+				const nextBtn = document.getElementById('next-btn');
+				const carouselItems = document.querySelectorAll('.carousel-item');
+				let currentIndex = 0;
+				// Функция для обновления слайда
+				function updateCarousel() {
+					const totalWidth = carouselItems.length * 100;
+					const offset = -currentIndex * 100;
+					carouselContainer.style.transition = "transform 0.5s ease-in-out";
+					carouselContainer.style.transform = `translateX(${offset}%)`;
+				}
+				// Кнопка назад
+				prevBtn.addEventListener('click', function () {
+					currentIndex = (currentIndex === 0) ? carouselItems.length - 1 : currentIndex - 1;
+					updateCarousel();
+				});
+				// Кнопка вперед
+				nextBtn.addEventListener('click', function () {
+					currentIndex = (currentIndex === carouselItems.length - 1) ? 0 : currentIndex + 1;
+					updateCarousel();
+				});
+				// Автоматическое переключение через 5 секунд
+				setInterval(function () {
+					currentIndex = (currentIndex === carouselItems.length - 1) ? 0 : currentIndex + 1;
+					updateCarousel();
+				}, 5000);
+			});
+		</script>
+		<p>
+		<h5>Lorem ipsum dolor sit amet consectetur. Non eget blandit in euismod felis id quisque nunc. Non orci lacus
+			elit mauris velit gravida imperdiet id. Ipsum pulvinar ac ut sociis. Sed magna gravida consequat et euismod
+			aenean quis mauris. Ut etiam egestas ultrices faucibus ultrices nisl enim consequat faucibus. Nibh id leo
+			ullamcorper eleifend. Id at commodo interdum et leo.</h5>
+		</p>
+	</section>
+	<!-- секция 3-->
+	<section class="work-section">
+		<div class="overlay3">
+			<img src="/img/BGVector3.png" alt="" class="bg-image">
+		</div>
+		<div class="text-container">
+			<div class="card-text">
+				<h1>Схема работы</h1>
+				<h4>Lorem ipsum dolor sit amet consectetur. Augue velit in enim sagittis imperdiet sit mauris. Vitae sit
+					in fusce massa amet..</h4>
+			</div>
+		</div>
+		<div class="puzzle-container">
+			<img src="/img/WGroup1.png" alt="Puzzle 1" class="puzzle-piece">
+			<img src="/img/WGroup2.png" alt="Puzzle 2" class="puzzle-piece">
+			<img src="/img/WGroup3.png" alt="Puzzle 3" class="puzzle-piece">
+			<img src="/img/WGroup6.png" alt="Puzzle 6" class="puzzle-piece">
+			<img src="/img/WGroup5.png" alt="Puzzle 5" class="puzzle-piece">
+			<img src="/img/WGroup4.png" alt="Puzzle 4" class="puzzle-piece">
+		</div>
+		<div class="button-container">
+			<button class="cta-button" id="scroll-to-top2">ОСТАВИТЬ ЗАЯВКУ</button>
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					const scrollToTopButton = document.getElementById('scroll-to-top2');
+					scrollToTopButton.addEventListener('click', function () {
+						window.scrollTo({
+							top: 0,
+							behavior: 'smooth'
+						});
+					});
+				});
+			</script>
+		</div>
+	</section>
+	<!--Секция 4-->
+	<section class="accordion-section">
+		<img src="/img/BGimg2.png" alt="Background Image" class="bg-image">
+		<img src="/img/BGVector4.png" alt="Vector Overlay" class="bg-vector">
+		<div class="accordion-container">
+			<div class="accordion-item">
+				<button class="accordion-btn">Заголовок 1</button>
+				<div class="accordion-content">
+					<p>Like the phrase “stem cell” itself, “stem cell therapy” is often used to describe a variety of
+						different medical therapies that utilize stem cells in some form to treat a patient. Sometimes
+						the term is used incorrectly to refer to platelet rich plasma (PRP) injections. The term is also
+						used to refer to stem cell transplants, also known as bone marrow transplants. Most commonly
+						“stem cell therapy” is used to describe a procedure where the patient’s adult stem cells and
+						other potentially regenerative cells are harvested from a tissue sample of either fat or bone
+						marrow taken from the patient. These concentrated regenerative cells are then used to treat
+						specific injuries typically by injecting them into the afflicted area. It should be said that
+						this type of stem cell therapy is currently not FDA approved and clinics performing it illegally
+						in the US or in other countries perform various versions of the procedure to treat illnesses and
+						injuries with little to no clinical evidence. At InGeneron we use the term “regenerative cell
+						therapy” since there are many different cell types and regenerative properties collected and
+						used by our therapy along with adult stem cells. Importantly we do not treat patients outside of
+						our approved clinical trials and we are dedicated to securing FDA approval through rigorous
+						clinical testing.</p>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<button class="accordion-btn">Заголовок 2</button>
+				<div class="accordion-content">
+					<p>Like the phrase “stem cell” itself, “stem cell therapy” is often used to describe a variety of
+						different medical therapies that utilize stem cells in some form to treat a patient. Sometimes
+						the term is used incorrectly to refer to platelet rich plasma (PRP) injections. The term is also
+						used to refer to stem cell transplants, also known as bone marrow transplants. Most commonly
+						“stem cell therapy” is used to describe a procedure where the patient’s adult stem cells and
+						other potentially regenerative cells are harvested from a tissue sample of either fat or bone
+						marrow taken from the patient. These concentrated regenerative cells are then used to treat
+						specific injuries typically by injecting them into the afflicted area. It should be said that
+						this type of stem cell therapy is currently not FDA approved and clinics performing it illegally
+						in the US or in other countries perform various versions of the procedure to treat illnesses and
+						injuries with little to no clinical evidence. At InGeneron we use the term “regenerative cell
+						therapy” since there are many different cell types and regenerative properties collected and
+						used by our therapy along with adult stem cells. Importantly we do not treat patients outside of
+						our approved clinical trials and we are dedicated to securing FDA approval through rigorous
+						clinical testing.</p>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<button class="accordion-btn">Заголовок 3</button>
+				<div class="accordion-content">
+					<p>Like the phrase “stem cell” itself, “stem cell therapy” is often used to describe a variety of
+						different medical therapies that utilize stem cells in some form to treat a patient. Sometimes
+						the term is used incorrectly to refer to platelet rich plasma (PRP) injections. The term is also
+						used to refer to stem cell transplants, also known as bone marrow transplants. Most commonly
+						“stem cell therapy” is used to describe a procedure where the patient’s adult stem cells and
+						other potentially regenerative cells are harvested from a tissue sample of either fat or bone
+						marrow taken from the patient. These concentrated regenerative cells are then used to treat
+						specific injuries typically by injecting them into the afflicted area. It should be said that
+						this type of stem cell therapy is currently not FDA approved and clinics performing it illegally
+						in the US or in other countries perform various versions of the procedure to treat illnesses and
+						injuries with little to no clinical evidence. At InGeneron we use the term “regenerative cell
+						therapy” since there are many different cell types and regenerative properties collected and
+						used by our therapy along with adult stem cells. Importantly we do not treat patients outside of
+						our approved clinical trials and we are dedicated to securing FDA approval through rigorous
+						clinical testing.</p>
+				</div>
+			</div>
+		</div>
+		<script>
+			document.querySelectorAll('.accordion-btn').forEach(button => {
+				button.addEventListener('click', () => {
+					const item = button.parentElement;
+					const content = item.querySelector('.accordion-content');
+					// Закрываем другие элементы
+					document.querySelectorAll('.accordion-item').forEach(otherItem => {
+						if (otherItem !== item) {
+							otherItem.classList.remove('active');
+							otherItem.querySelector('.accordion-content').style.maxHeight = '0';
+							otherItem.querySelector('.accordion-content').style.padding = '0 20px';
+						}
+					});
+					// Переключаем текущий элемент
+					item.classList.toggle('active');
+					if (item.classList.contains('active')) {
+						content.style.maxHeight = content.scrollHeight + 'px';
+						content.style.padding = '15px 20px';
+					} else {
+						content.style.maxHeight = '0';
+						content.style.padding = '0 20px';
+					}
+				});
+			});
+		</script>
+	</section>
+	<footer class="footer_navbar">
+		<div class="logo">
+			<a href="#">
+				<h1>SIMTEX</h1>
+			</a>
+		</div>
+		<nav>
+			<ul id="navbar-links">
+				<li><a href="#catalog">Каталог</a></li>
+				<li><a href="#manufacturers">Производители</a></li>
+				<li><a href="#clients">Для кого мы работаем</a></li>
+				<li><a href="#certificates">Сертификаты</a></li>
+				<li><a href="#about">О нас</a></li>
+				<li><a href="#faq">FAQ</a></li>
+				<li><a href="#contacts">Контакты</a></li>
+			</ul>
+		</nav>
+		<div class="phone">+7 (812) 313-58-45</div>
+		<button class="apply-button" id="scroll-to-top2">ОСТАВИТЬ ЗАЯВКУ</button>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const scrollToTopButton = document.getElementById('scroll-to-top2');
+				scrollToTopButton.addEventListener('click', function () {
+					window.scrollTo({
+						top: 0,
+						behavior: 'smooth'
+					});
+				});
+			});
+		</script>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/inputmask"></script>
+</body>
+
+</html>
